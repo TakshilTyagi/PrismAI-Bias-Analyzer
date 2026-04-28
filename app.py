@@ -4,7 +4,7 @@ genai.configure(api_key="AIzaSyDHZuOf0vn_tYSrWWoC1PXDV8yDM3Zxo4A")
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 st.set_page_config(page_title="PrismAI", page_icon="", layout="centered")
 st.markdown("""
-<style>
+<style>`
 header {visibility: hidden;}
 footer {visibility: hidden;}
 .stApp {
