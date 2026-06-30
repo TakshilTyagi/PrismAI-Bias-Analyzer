@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyDJZZ8U25Q0ozP12xpTE08UwE5k_TyZyn0")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 st.set_page_config(page_title="PrismAI", page_icon="", layout="centered")
 st.markdown("""
@@ -77,7 +77,7 @@ st.markdown('<div class="big-title"> Prism AI</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">AI-powered BIAS detection for fair communication</div>', unsafe_allow_html=True)
 username = st.text_input("Enter your name")
 if username:
-    st.markdown(f"<div class='center'>Welcome, <b>{username}</b> 👋</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='center'>Welcome, <b>{username}</b> </div>", unsafe_allow_html=True)
 st.divider()
 text = st.text_area("Enter text to analyze", height=100)
 audio = st.audio_input("Dictate Your Text")
