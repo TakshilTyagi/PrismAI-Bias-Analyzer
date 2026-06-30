@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 st.set_page_config(page_title="PrismAI", page_icon="", layout="centered")
 st.markdown("""
